@@ -12,3 +12,12 @@ z = round(x / y, 2)
 print(f"{x} / {y} equals {z}")
 # Alternative way to specify float precision
 print(f"{x} / {y} equals {z:.5f}")
+
+def main():
+    x = int(input("What's x? "))
+    print("x squared is", square(x))
+
+def square(n):
+    return n ** 2
+
+main()
