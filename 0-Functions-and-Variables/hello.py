@@ -15,3 +15,13 @@ print(f"Hello, {first_name} {last_name}")
 # Both will fail if user input is not two values
 first_name = name.split(sep=" ")[0]
 last_name = name.split(sep=" ")[1]
+
+# Declaring functions to do the same as above
+def main():
+    name = input("What is your name? ")
+    hello(name)
+
+def hello(to="world"):
+    print(f"Hello {to}")
+
+main()
