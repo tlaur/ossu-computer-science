@@ -9,10 +9,20 @@ def main():
         print("dinner time")
 
 def convert(time):
-    time = time.strip().split(":")
-    hours = int(time[0])
-    minutes = float(time[1])
-    return hours + minutes / 60
+    time = time.strip().replace(" ", ":").split(":")
+    hour = int(time[0])
+    minute = float(time[1])
+    meridiem = time[2].lower() if len(time) == 3 else None
+    
+    if meridiem is not None:
+        if meridiem == "p.m" and 1 <= hour <= 11:
+            hour += 12
+        elif meridiem == "a.m" and hour == 12:
+            hour = 0
+        else:
+            pass
+
+    return hour + (minute / 60)
 
 if __name__ == "__main__":
     main()
