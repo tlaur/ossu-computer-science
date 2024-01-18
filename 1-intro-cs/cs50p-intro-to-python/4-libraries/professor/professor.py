@@ -3,7 +3,7 @@ import random
 def main():
     question_count = 0
     level = get_level()
-    while question_count < 10:
+    while question_count < 9:
         try:
             ints = [generate_integer(level),generate_integer(level)]
             answer = str(ints[0] + ints[1])
