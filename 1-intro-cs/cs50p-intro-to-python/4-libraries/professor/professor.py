@@ -2,8 +2,9 @@ import random
 
 def main():
     question_count = 0
+    score = 0
     level = get_level()
-    while question_count < 9:
+    while question_count < 10:
         try:
             ints = [generate_integer(level),generate_integer(level)]
             answer = str(ints[0] + ints[1])
@@ -14,15 +15,17 @@ def main():
                 response = input(question)
                 if response == answer:
                     question_count += 1
+                    score += 1
                     break
                 else:
                     print("EEE")
                     answer_count += 1
                 if answer_count == 3:
-                    print(answer)
+                    print(question,answer)
                     question_count += 1
         except Exception as e:
             print(e)
+    print(f"Score: {score}")
 
 def get_level():
     level = None
@@ -44,4 +47,5 @@ def generate_integer(level: int):
         case _:
             raise ValueError
         
-main()
+if __name__ == "__main__":
+    main()
