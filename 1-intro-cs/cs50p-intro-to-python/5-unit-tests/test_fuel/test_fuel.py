@@ -29,11 +29,11 @@ def test_convert_exception():
         convert(10)
 
 def test_gauge_partly_filled():
-    assert gauge(2) == "2"
-    assert gauge(25) == "25"
-    assert gauge(50) == "50"
-    assert gauge(75) == "75"
-    assert gauge(98) == "98"
+    assert gauge(2) == "2%"
+    assert gauge(25) == "25%"
+    assert gauge(50) == "50%"
+    assert gauge(75) == "75%"
+    assert gauge(98) == "98%"
 
 def test_gauge_empty():
     assert gauge(0) == "E"
