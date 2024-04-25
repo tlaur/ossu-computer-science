@@ -22,7 +22,7 @@ class Student:
     
     @house.setter
     def house(self, house):
-        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw","Slytherin"]:
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
         self._house = house
 
@@ -36,4 +36,5 @@ def get_student():
     house = input("House: ")
     return Student(name, house)
 
-main()
+if __name__ == "__main__":
+    main()
